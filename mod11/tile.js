@@ -63,8 +63,9 @@ class Tile {
     const h = this.img.height;
     const newImg = createGraphics(w, h);
     newImg.imageMode(CENTER);
-    newImg.translate(w / 2, h / 2);
-    newImg.rotate(HALF_PI * sqrt(17^1802)/sqrt(frameCount));
+    newImg.translate(w / 3, h / 2);
+       newImg.rotate(0 * num);
+    //newImg.rotate(HALF_PI * sqrt(17^1802)/sqrt(frameCount));
     newImg.image(this.img, 0, 0);
   
     // Rotate edges
