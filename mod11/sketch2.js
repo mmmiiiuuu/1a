@@ -78,14 +78,14 @@ function draw() {
   background(0,0,0,0);
       weight = fxrand() * 300;
       mood = fxrand()/weight;
- 
+
 let oogle=frameCount*weight;
 
  rotate = 90;
 
   // Draw the grid
   const w = width / DIM/oogle^2;
-  const h = height / DIM;
+  const h = height / DIM/oogle^1.89;
   for (let j = 0; j < DIM; j++) {
     for (let i = 0; i < DIM; i++) {
       let cell = grid2[i + j * DIM];
