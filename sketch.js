@@ -2,7 +2,7 @@ let weight = 0;
 let seed= .17;
 
 function setup() {
-  var canvas = createCanvas(1052, 180);
+  var canvas = createCanvas(1030, 127);
  
   // Move the canvas so it’s inside our <div id="sketch-holder">.
   canvas.parent('sketch-holder');

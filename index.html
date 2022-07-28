@@ -1,24 +1,4 @@
 <!DOCTYPE html><html lang="en"><head>
-
-  <title>FX_HASH_p5</title>
-
-
-<script src="p5.js"></script>
-<script language="javascript" src="tools.js"></script>
-
-    <script src="jquery.min.js" defer></script>
-    <script src="bignumber.min.js" defer></script>
-    <script src="netpbm-parser.js" defer></script>
-    <script src="numtowords.js" defer></script>
-    <script src="index.js" defer></script> 
-   <script src="sketch.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-
-
-  
-
-  
 <script id="fxhash-snippet">
   //---- do not edit the following code (you can indent as you wish)
   let alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"
@@ -50,10 +30,41 @@
   //---- /do not edit the following code
 
 </script>
+   <script language ="javascript" src="hashcutter.js" defer></script>
+<script src="p5.js"></script>
+<script language="javascript" src="tools.js"></script>
+    <script src="jquery.min.js" defer></script>
+    <script src="bignumber.min.js" defer></script>
+    <script src="netpbm-parser.js" defer></script>
+    <script src="numtowords.js" defer></script>
+    <script src="index.js" defer></script> 
+   <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
 
   
-    <div id="presets">
-        <button p=0 dec="0.000000000000000000085">
+
+  <center></center><div id="datamoth"><div id="sketch-holder"><br>
+
+
+
+
+
+  </div></center>
+
+  
+   <center> <div id="presets">
+
+
+             
+
+           
+
+
+      <button p=-0.5 dec="4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919" onclick=";var rbn17 = randomBN17(true); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value='a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919' style="background: 0,0,0,0;">
+<input type="button" id="no_showSteps" onclick="generatePNG()" value="Generate">
+      <a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919">	 <center>        <button p=0 dec="0.000000000000000000085">
         Clear</button>
         <button p=2 dec="960939379918958884971672962127852754715004339660129306651505519271702802395266424689642842174350718121267153782770623355993237280874144307891325963941337723487857735749823926629715517173716995165232890538221612403238855866184013235585136048828693337902491454229288667081096184496091705183454067827731551705405381627380967602565625016981482083418783163849115590225610003652351370343874461848378737238198224849863465033159410054974700593138339226497249461751545728366702369745461014655997933798537483143786841806593422227898388722980000748404719">
         Self-referencing</button>
@@ -64,30 +75,17 @@
          <button p=27 dec="21531275725487">
         Miusoph <3</button>   
                                           
-        <input type="file" id="netpbm" name="file" />
-
-             
-
-           
-  <center><input type="button" id="no_showSteps" onclick="generatePNG()" value="Generate"></center></center>
-
-      <button p=-0.5 dec="4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919" onclick=";var rbn17 = randomBN17(true); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value='a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919' style="background: 0,0,0,0;">
-
-      <a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919">	<div id="sketch-holder"></button><div id="grid">	</a>	 <textarea id="wordsArea" style="width:15%; placeholder="Number as words" readonly></textarea>
-      			 <textarea id="bitArea" style="width:10%; placeholder="The Binary String"></textarea>
-					   <textarea id="decArea" style="width:10%; placeholder="The k Decimal"></textarea> </div><textarea id="numTA" style="width:10"></textarea>	<canvas id="canvas2" width="0" height="0" style>
-		Twoja przeglądarka nie obsługuje HTML 5 Canvas. 
-	</canvas>    
+        <input type="file" id="netpbm" name="file" /></button></center><center><div id="grid">	</center></a>	</center>
 
 
 
 
-
-
-
-   </div> 
+   </div>  
         <script src="url.js"></script>
 
+<textarea id="wordsArea" style="width:100%; placeholder="Number as words" readonly></textarea>
+      			 <textarea id="bitArea" style="width:100%; placeholder="The Binary String"></textarea>
+					   <textarea id="decArea" style="width:100%; placeholder="The k Decimal"></textarea> </div><textarea id="numTA" style="width:100"></textarea>
 
 
     </center>
@@ -96,8 +94,10 @@
    
 </p> 
 	
-#datamoth
 
+	<a id="link2img" target="_blank" style="display:none"></a>
+	<a id="link2img2" href="javascript:void()" onclick="openImgInNewWin()" style="display:none"></a>
+<div id="numberDiv"><center><a id="linkWithNum" target="_blank" href="" style="display:none">#datamoth</a></center></div>
 
  	<div id="graphDiv">   
 	<div id="buttonsDiv">
@@ -106,18 +106,19 @@
 		<input type="button" onclick="plotGraph()" value="Number to graph 
 ￪"> <!-- &#8679; -->
 	</div>
-		<canvas id="canvas" width="980" height="320" tabindex="0">
+		<center>	<canvas id="canvas2" width="0" height="0" style>
+		Twoja przeglądarka nie obsługuje HTML 5 Canvas. 
+	</canvas>    
+<canvas id="canvas" width="980" height="320" tabindex="0">
 			Your browser does not support the HTML 5 Canvas. 
-		</canvas>
+		</canvas></center>
 
 
  	
 
- 	<center></center><div id="numberDiv">
+ 	<center></center>
 
-	<a id="link2img" target="_blank" style="display:none">Link do obrazka (otwiera się w nowym oknie, nie działa w IE)</a>
-	<a id="link2img2" href="javascript:void()" onclick="openImgInNewWin()" style="display:none">Otwórz obrazek w nowym oknie (dla IE)</a></div>
-	<a id="linkWithNum" target="_blank" href="" style="display:none">Link do tej strony wraz z liczbą</a>
+
 
 
 
@@ -190,16 +191,16 @@ Move graph max to right"> <br>
 </head>
 <center>
 <body>
-   <script language ="javascript" src="hashcutter.js" defer></script>
+
 
  
 
 
   <body>
 
-   <textarea id="inp" style="width:42%;text-align:center;" rows="10" placeholder="String Goes Here"></textarea>
+   <textarea id="inp" style="width:42%;text-align:center;" rows="10" placeholder="##"></textarea>
    <input type="button" value="Cut" onClick="compress();" />
-   <textarea id="out" style="width:42%;text-align:center;" align="left" placeholder="Keys Go Here" rows="10"></textarea>
+   <textarea id="out" style="width:42%;text-align:center;" align="left" placeholder="##" rows="10"></textarea>
   <tr><td><input type="button" value="Restore" onClick="restore();" /></td></tr></table>
  	
 
