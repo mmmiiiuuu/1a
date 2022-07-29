@@ -1,0 +1,29 @@
+
+body {
+    font-family:"Lucida Console", Monaco, monospace;
+    color: #5aff00;
+    background: #222;
+    line-height:0.017;
+    font-size:1px;
+    padding:20 0px;
+          display: block;
+    justify-content: center;
+}
+
+#datamoth {
+        margi: 2%;
+        display: inline-block;
+            justify-content: center;
+    color: #5aff00 !important;
+
+    line-height:.017% !important;
+
+}
+
+#sketch-holder {
+   margin: 0%;
+   display: inline-flex;
+    justify-content: center;
+
+
+}
