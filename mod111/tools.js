@@ -478,7 +478,7 @@
 		
 		// white zig-zag
 		ctx.lineWidth = 10;
-		ctx.strokeStyle = 'white';
+		ctx.strokeStyle = 'gray';
 		ctx.beginPath();
 		
 		ctx.moveTo(xa+2, ya-10);

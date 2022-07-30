@@ -29,7 +29,7 @@ let weight = 0;
 let seed= .17;
 function setup() {
 
-  var canvas3 = createCanvas(989,155);
+  var canvas3 = createCanvas(960,155);
 
   canvas3.parent('sketch-holder');
   canvas3.style('z-index', '-1');
