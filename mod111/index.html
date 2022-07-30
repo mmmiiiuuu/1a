@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<script id="fxhash-snippet">
+  //---- do not edit the following code (you can indent as you wish)
+  let alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"
+  var fxhash = "oo" + Array(49).fill(0).map(_=>alphabet[(Math.random()*alphabet.length)|0]).join('')
+  let b58dec = str=>[...str].reduce((p,c)=>p*alphabet.length+alphabet.indexOf(c)|0, 0)
+  let fxhashTrunc = fxhash.slice(2)
+  let regex = new RegExp(".{" + ((fxhashTrunc.length/4)|0) + "}", 'g')
+  let hashes = fxhashTrunc.match(regex).map(h => b58dec(h))
+  let sfc32 = (a, b, c, d) => {
+    return () => {
+      a |= 0; b |= 0; c |= 0; d |= 0
+      var t = (a + b | 0) + d | 0
+      d = d + 1 | 0
+      a = b ^ b >>> 9
+      b = c + (c << 3) | 0
+      c = c << 21 | c >>> 11
+      c = c + t | 0
+      return (t >>> 0) / 4294967296
+    }
+  }
+  var fxrand = sfc32(...hashes)
+  // true if preview mode active, false otherwise
+  // you can append preview=1 to the URL to simulate preview active
+  var isFxpreview = new URLSearchParams(window.location.search).get('preview') === "1"
+  // call this method to trigger the preview
+  function fxpreview() {
+    console.log("fxhash: TRIGGER PREVIEW")
+  }
+  //---- /do not edit the following code
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script language="javascript" src="tools.js"></script>
+<script language ="javascript" src="hashcutter.js" defer></script>
+<script src="p5.js"></script>
+<script src="p5.dom.js"></script>
+<script src="tile.js"></script>
+<script src="cell.js"></script>
+    <script src="sketch2.js"></script>
+
+
+<script src="jquery.min.js" defer></script>
+<script src="bignumber.min.js" defer></script>
+<script src="netpbm-parser.js" defer></script>
+<script src="numtowords.js" defer></script>
+<script src="index.js" defer></script> 
+
+  
+
+
+
+
+           
+P4<br>
+106 17<br>
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÀÿÿÿÿÿñÿÇÿÿÿÿÿÀÀÿþÿÿøÿ‡ÿÿÿÿÿÀÞþÿÿø‡ÿ¿ÿÿÿÀßïþÿøÿ¿ÿ¿Àßïûÿü>ÿŸÿ¿Àßïøÿüïï»ÀßïþÿüçOÇƒÀßîÿü çoÓÀßïçÿü Ëg›¿/ÀßÌ xÿþ Ýw»¿wÀßÝçsü Þs»¿wÀßÝçGü ž{»¿wÀÀ=ç^?ü¿{»ŸwÀÿýçB™þ¿ÿ‡ßÿÀÿüxÃþ?ÿÿÏÿÿÀÿÿóÿÿÿÿÿÿÿÿÀ
+        	<br> <div id="presets"><input type="file" id="netpbm" name="file" />
+        </button><br>
+      <button p=-0.5 dec="4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919" onclick=";var rbn17 = randomBN17(true); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value='a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919' style="background: 0,0,0,0;width: 1337px;">
+<input type="button" id="no_showSteps" onclick="generatePNG()" value="Generate"> <div id="grid"><center><div id="sketch-holder"></center>
+      <a href="#4858487703182312513400597878822819808988695486580197277684452096504734505393166426886283222873126606689179192908166794948550050772187190459205301115928926884342947673144041133111365027316053950834135904477672386461321586003959375057995612308880437437463598486619301291088146430571259882538007541827584985027786047090428419066794136269255023707135350492002326646115371089126706426075172249806712588928979889314717354183628312868819106593130490187550238035193781913352215473354690203619320613954646528752371024628332102672756201204196068542119919"></a><button p=0 dec="0.000000000000000000085">fffffff</button>
+
+
+	
+
+<br>
+	<button p=0.5 dec="4858487703217654168507377107565676789145697178497253677539145555247620343537955749299116772611982962556356527603203744742682135448820545638134012705381689785851604674225344958377377969928942335793703373498110479735981161931616997837568312568489938311294622859986621379234205529965392091893253288500432782862263410646820171439206408889517627953930924005233285455643232746873900205120036557171717499335122490912065694632935352302178602108137941774883061885522205403967593003199773578952627785152838963495027790689532144351329310799436758088941551">#######</button>
+
+
+<br>
+<button p=2 dec="960939379918958884971672962127852754715004339660129306651505519271702802395266424689642842174350718121267153782770623355993237280874144307891325963941337723487857735749823926629715517173716995165232890538221612403238855866184013235585136048828693337902491454229288667081096184496091705183454067827731551705405381627380967602565625016981482083418783163849115590225610003652351370343874461848378737238198224849863465033159410054974700593138339226497249461751545728366702369745461014655997933798537483143786841806593422227898388722980000748404719">
+        Self-referencing</button>
+
+
+<br>
+<button p=2 dec="960939379918958884971672962127852754715004339660129306651505519271702802395266424689642842174350718121267153782770623355993237280874144307891325963941337723487857735749823926629715517173716995165232890538221612403238855866184013260522753122461549418660848184788512583419422760972591200813120977848037656423089104040982064477496888800557578380632137393189901536685420214238570784204054100880556256139816373230468970660533160429753220133608095153403766635687948739730842418327362281018940453558210790069088474973124708711014221138053801848209391">
+        Keely</button></button>
+
+
+
+      
+
+
+
+      	<button p=27 dec="21531275725487">
+        Miusoph <3</button> </button>  
+                                          
+        <center>
+
+</div></center></button></center>
+
+<script src="url.js"></script>
+
+
+
+<center><button style="background:0,0,0,0; width: 1337px">
+<textarea id="wordsArea" style="width:25%; font-size: 1.77px; placeholder="Number as words" readonly></textarea>
+<textarea id="bitArea" style="width:25%; font-size: 3.79px; placeholder="The Binary String"></textarea>
+<textarea id="decArea" style="width:25%; font-size: 5.9px; placeholder="The k Decimal"></textarea> </div>
+</button></center>
+
+
+      	<center><button style="background:0,0,0,0;width: 1337px">   <textarea id="inp" style="width:42%;text-align:center;" rows="10" placeholder="##"></textarea>
+   <input type="button" value="Cut" onClick="compress();" />
+   
+
+
+
+
+   <textarea id="out" style="width:42%;text-align:center;" align="left" placeholder="##" rows="10"></textarea>
+  <tr><td><input type="button" value="Restore" onClick="restore();" /></td></tr></table>
+ 	</button>
+<center><textarea id="numTA" style="width:89; font-size: 13px;max-width: 528px;"></textarea></center></div>
+
+
+
+
+   </a><center><button style="background:0,0,0,0; width: 1337px;height: 233px"><canvas id="canvas1" width="900" height="289" tabindex="0">
+			Your browser does not support the HTML 5 Canvas. 
+		</canvas>	<canvas id="canvas2" width="0" height="0" style="background: 0,0,0,0">
+		Twoja przeglądarka nie obsługuje HTML 5 Canvas. 
+	</canvas>     
+</p> 
+</center>
+
+	<a id="link2img" target="_blank" style="display:none"></a>
+
+
+
+	<a id="link2img2" href="javascript:void()" onclick="openImgInNewWin()" style="display:none"></a>
+
+
+
+
+
+<div id="numberDiv"></div>
+
+
+        
+   
+
+
+ <center><div id="graphDiv"></button>   </center>
+	<div id="buttonsDiv">
+		<input type="button" onclick="document.getElementById(&#39;numTA&#39;).value=graph2Num()" value="Graph to number 
+￪"> <!-- &#8681; -->
+		
+
+
+
+
+		<input type="button" onclick="plotGraph()" value="Number to graph 
+￬"> <!-- &#8679; -->
+	</div>
+		<center>	
+</center>
+
+
+ 	
+
+ 	<center></center>
+
+
+
+
+
+  
+		<div id="graphOptionsDiv">
+			<center></center><span class="toggleButton" onclick="toggleDiv(&#39;graphOptions&#39;);">[+] <strong>Graph options and functions</strong></span>
+			<div id="graphOptions" style="display:none">
+				<center><p style="margin: 0px;float:center;">Choose color for the first mouse button: </p>
+				<div style="margin: 0px;float:center;width:16px;height:16px;background:black;border-width:2px;border-color:#F00;border-style:solid" id="go_black" onclick="chooseColor(1)"></div>
+				
+
+				<div style="margin: 0px;float:center;width:16px;height:16px;background:white;border-width:2px;border-color:#00F;border-style:solid" id="go_white" onclick="chooseColor(0)"></div>
+				
+
+				<div style="clear: both"></div>
+				
+
+				<input type="checkbox" id="go_invertAxes" onchange="invertAxes();"> <label for="go_invertAxes">Invert axes</label><br>
+				
+
+				<input type="button" id="go_invertGraph" onclick="invertGraph()" value="Invert graph (image)"><br>
+				
+
+				<input type="button" id="go_negative" onclick="negative()" value="Negative"><br>
+				
+
+				<input type="button" id="go_reset" onclick="resetGraph()" value="Reset graph (clear)"> <br>
+				
+
+				<input type="button" id="go_moveLeft1U" onclick="moveLeft()" value="←
+Move graph left (1 unit)">
+				
+
+				<input type="button" id="go_moveRight1U" onclick="moveRight()" value="→
+Move graph right (1 unit)">
+				
+
+				<input type="button" id="go_moveUp1U" onclick="moveUp()" value="↑
+Move graph up (1 unit)">
+				
+
+				<input type="button" id="go_moveDown1U" onclick="moveDown()" value="↓
+Move graph down (1 unit)"> <br>
+				
+
+				<input type="button" id="go_moveLeftMax" onclick="moveMaxLeft()" value="|←
+Move graph max to left">
+				
+
+				<input type="button" id="go_moveRightMax" onclick="moveMaxRight()" value="→|
+Move graph max to right"> <br>
+				
+
+				<input type="button" id="go_flipX" onclick="flipImageX()" value="Flip vertically (around local X axis)">
+				
+
+				<input type="button" id="go_flipX" onclick="flipImageY()" value="Flip horizontally (around local Y axis)"> <br>
+				
+
+				<input type="button" id="go_drawTSRF" onclick="drawTSRF(false)" value="Load and plot Tupper&#39;s self-referential formula">
+				
+
+				<input type="button" id="go_drawTSRF_rev" onclick="drawTSRF(true)" value="Load and plot Tupper&#39;s self-referential formula (reversed axes)"></center><br>
+				
+
+
+				<fieldset>
+					<legend><center>Plot method:</center></legend>
+					<input type="radio" id="go_smartPlot" name="plotMethod" value="go_smartPlot" checked="">Smart - plot graph using knowledge of how Tupper's formula work<br>
+					<input type="radio" id="go_computeEachUnit" name="plotMethod" value="go_computeEachUnit">Unit-precise - plot graph calculating value for each square unit (very slow, might take a few minutes and freeze browser for a while, better use "Smart" method instead)<br>
+					<input type="radio" id="go_computeEachPixel" name="plotMethod" value="go_computeEachPixel">Pixel-precise - plot graph calculating value for each pixel (cheating, because thanks to floor function and small optimization all calculations are the same as for previous option)<br>
+				</fieldset>
+			
+
+
+
+		
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+		<div id="numberOptionsDiv">
+			<center><span class="toggleButton" onclick="toggleDiv(&#39;numberOptions&#39;);">[+] <strong>Number options and functions</strong></span></center>
+			<div id="numberOptions" style="display:none">
+				<input type="button" id="no_separateThousands" onclick="separateThousands()" value="Separate thousands">
+				<input type="button" id="no_removeNonNumeric" onclick="removeNonNumeric()" value="Remove all non numeric characters">
+				<input type="button" id="no_clearNum" onclick="clearNum()" value="Clear number field"><br>
+				<input type="button" id="no_randomNum" onclick="document.getElementById(&#39;numTA&#39;).value = randomBN17(false)" value="Generate random number">
+				<input type="button" id="no_randomNumPlot" onclick="var rbn17 = randomBN17(false); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value="Generate random number and plot it">
+				<input type="button" id="no_randomNumPlot1802" onclick="var rbn17 = randomBN17(true); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value="Generate random 1802 bits long number and plot it"><br>
+				<input type="button" onclick="bin2arr()" value="Binary &#39;image&#39; to graph 
+￪"> <!-- &#8679; --><br>
+				<input type="button" id="no_showSteps" onclick="showSteps()" value="Calculate intermediate values for number above"><br><br>
+				<div id="no_stepsDiv">
+					<span class="toggleButton" onclick="toggleDiv(&#39;no_steps&#39;);">[+] <strong>Intermediate values</strong></span>
+					<div id="no_steps" style="display:none"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+
+
+
+
+
+
+
+</head>
+<center>
+<body>
+
+
+ 
+
+
+  <body>
+
+
+
+
+
+
+
+		
+
+			
+	
+
+
+	<div style="text-align: center;">
+		
+	
+
+
+
+
+
+	
+	
+	</div>
+
+
+    
+</center>
+    <br>
+<center>
+
+    
+
+
+
+	<br>
+	<br>
+	<input type="checkbox" id="includeFormula"> <label for="includeFormula"></label><small><input type="checkbox" checked id="showCommas" value="0" />
+	<br>
+</h3>
+
+  
+
+
+
+
+
+
+
+
+
+<div id="datamoth">  <a href="./index.html?preset=0.00000000000wghH34eio#4858487703217654168507377107450693851772370587192492902981357230388190280376518405622684315178831532746907393436281787641652886285762412919463185054465291816806145299455712865420702487851358037636941887433564787708235990247061436383131462512922150327828658197997496163959296799276527039374017526183271969467448006679800269757416355868054276640330353875727349310436644630918692687316832172657198719480309447450938812863866931033028221526054545780497985553566120176996522134812570684033466772179014517933528633176555255626738759098051180160352239">P1<br>
+            106 17<br>         
+            1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111<br>
+            1111111111111111111111111111111111111111111100011111111111000111111111111111111111111111111111111111111111<br>
+            1100000011111111111111101111111111111111111110001111111110000111111111111111111111111111111111111111111111<br>
+            1101111000001111111111101111111111111111111110000111111110000111111111111011111111111111111111111111111111<br>
+            1101111111101111111111100111111111111111111110000111111100001111111111111011111111111111101111110111111111<br>
+            1101111111101111111110110111111111111111111111000011111000001111111111111001111111111111101111110111111111<br>
+            1101111111101111111110000111111111111111111111000001111000001111111011110001111111101111101110110111111111<br>
+            1101111111101111111111100000001111111111111111000000010000001111111001110100111111000111100000110111111111<br>
+            1101111111101110000011110111111111111111111111000000000000001111111001110110111111010011000111110000111111<br>
+            1101111111101111111001110111111111111111111111000000000000001111110010110110011110011011101111110010111111<br>
+            1101111111001100000001110111100011111111111111100000000000011111110111010111011110111011101111110111011111<br>
+            1101111111011101111001110111001101111111111111000000000000011111110111100111001110111011101111110111011111<br>
+            1101111111011101111001110100011101111111111111000000000000011111100111100111101110111011101111110111011111<br>
+            1100000000111101111001110101111000111111111111000000010000011111101111110111101110111011100111110111011111<br>
+            1111111111111101111001110100001010011001111111100000010000011111101111111111111110000111110111111111111111<br>
+            1111111111111100000000110111100011000011111111100001111000111111111111111111111111001111111111111111111111<br>
+            1111111111111111111100111111111111111111111111110001111001111111111111111111111111111111111111111111111111<br></center></a>
+
+<center><a id="linkWithNum" target="_blank" href="" style="display:none"><button style="background:0,0,0,0">click to refresh</button></a></center>
+            <center></center>
+</div></body></html>
